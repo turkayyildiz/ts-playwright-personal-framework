@@ -1,9 +1,22 @@
-
-# Playwright
+# Dependencies
 node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
-/.idea
+
+# Playwright / Cucumber Artifacts
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+videos/
+screenshots/
+
+# Build / Output
+dist/
+
+# IDEs
+.idea/
+.vscode/
+
+# OS Specific
+.DS_Store
+Thumbs.db

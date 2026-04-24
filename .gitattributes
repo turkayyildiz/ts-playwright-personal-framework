@@ -1,0 +1,11 @@
+# Exclude generated test reports from language statistics
+test-results/** linguist-vendored
+reports/** linguist-vendored
+*.html linguist-detectable=false
+
+# Exclude documentation or assets if necessary
+docs/** linguist-documentation
+assets/** linguist-vendored
+
+# Ensure line endings are consistent (optional but recommended)
+* text=auto
