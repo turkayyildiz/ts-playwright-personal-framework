@@ -1,0 +1,23 @@
+{
+  "name": "ts-playwright-personal-framework",
+  "version": "1.0.0",
+  "description": "Automated Testing Framework built with Playwright, TypeScript, and Cucumber (BDD). High-performance E2E testing suite for modern web applications with professional reporting.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turkayyildiz/ts-playwright-personal-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/turkayyildiz/ts-playwright-personal-framework/issues"
+  },
+  "homepage": "https://github.com/turkayyildiz/ts-playwright-personal-framework#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0"
+  }
+}
