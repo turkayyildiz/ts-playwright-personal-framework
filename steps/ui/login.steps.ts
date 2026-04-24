@@ -1,8 +1,7 @@
 // steps/login.steps.ts
 import { Given, When, Then, Before, After } from '@cucumber/cucumber';
 import { Browser, BrowserContext, Page, chromium } from '@playwright/test';
-import { expect } from '@playwright/test';
-import { LoginPage } from "@pages/loginPage";
+import { LoginPage } from '../../pages/loginPage';
 import {ICustomWorld} from "@support/world";
 
 // ── Hooks ────────────────────────────────────────────────────
