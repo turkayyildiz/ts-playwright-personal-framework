@@ -1,38 +1,14 @@
 // steps/login.steps.ts
-import { Given, When, Then, Before, After } from '@cucumber/cucumber';
-import { Browser, BrowserContext, Page, chromium } from '@playwright/test';
-import { LoginPage } from '../../pages/loginPage';
-import {ICustomWorld} from "@support/world";
-
-// ── Hooks ────────────────────────────────────────────────────
-
-Before(async function (this: ICustomWorld) {
-    this.browser = await chromium.launch({ headless: true });
-    this.context = await this.browser.newContext({
-        baseURL: process.env.BASE_URL ?? 'https://www.saucedemo.com',
-        viewport: { width: 1280, height: 720 },
-        recordVideo: process.env.CI ? { dir: 'test-results/videos' } : undefined,
-    });
-    this.page       = await this.context.newPage();
-    this.loginPage  = new LoginPage(this.page);
-});
-
-After(async function (this: ICustomWorld, scenario) {
-    if (scenario.result?.status === 'FAILED') {
-        const screenshot = await this.page?.screenshot({ fullPage: true });
-        if (screenshot) {
-            this.attach(screenshot, 'image/png');
-        }
-    }
-    await this.page?.close();
-    await this.context?.close();
-    await this.browser?.close();
-});
+import { Given, When, Then } from '@cucumber/cucumber';
+import { expect } from '@playwright/test';
+import { ICustomWorld } from '@support/world';
 
 // ── Given ────────────────────────────────────────────────────
 
 Given('I am on the SauceDemo login page', async function (this: ICustomWorld) {
+    if (!this.page) throw new Error('Page is not initialised — check Before hook');
     await this.loginPage!.goto();
+    await expect(this.page).toHaveURL('https://www.saucedemo.com/');
 });
 
 // ── When ─────────────────────────────────────────────────────

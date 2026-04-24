@@ -1,22 +1,17 @@
+// cucumber.js
 module.exports = {
     default: {
-        requireModule: ['ts-node/register'],
-        require: [
-            'hooks/*.ts',
+        paths:         ['features/**/*.feature'],
+        require:       [
+            'support/world.ts',
+            'hooks/hooks.ts',
             'steps/**/*.ts',
-            'support/**/*.ts'
         ],
-        paths: [
-            'features/**/*.feature'
-        ],
+        requireModule: ['ts-node/register'],
         format: [
             'progress-bar',
-            'html:test-results/cucumber-report.html'
+            'html:reports/cucumber-report.html',
         ],
-        formatOptions: {
-            snippetInterface: 'async-await'
-        },
-        parallel: 1,
-        publishQuiet: true
-    }
-}
+        tags: process.env.TAGS ?? '',
+    },
+};
