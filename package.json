@@ -4,15 +4,16 @@
   "description": "Automated Testing Framework built with Playwright, TypeScript, and Cucumber (BDD). High-performance E2E testing suite for modern web applications with professional reporting.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js --config cucumber.config.js",
-    "test:smoke": "TAGS=@smoke cucumber-js --config cucumber.config.js",
-    "test:negative": "TAGS=@negative cucumber-js --config cucumber.config.js",
-    "test:security": "TAGS=@security cucumber-js --config cucumber.config.js"
+    "test":           "cucumber-js --config cucumber.config.js",
+    "test:smoke":     "cross-env TAGS=@smoke cucumber-js --config cucumber.config.js",
+    "test:negative":  "cross-env TAGS=@negative cucumber-js --config cucumber.config.js",
+    "test:security":  "cross-env TAGS=@security cucumber-js --config cucumber.config.js"
   },
   "devDependencies": {
     "@cucumber/cucumber": "^10.3.2",
     "@playwright/test": "^1.44.0",
     "@types/node": "^20.0.0",
+    "cross-env": "^10.1.0",
     "playwright": "^1.44.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5"

@@ -73,7 +73,7 @@ ts-playwright-personal-framework/
 │   └── world.ts                  # ICustomWorld typed shared state
 │
 ├── reports/                      # Generated HTML reports (gitignored)
-├── cucumber.js                   # Cucumber configuration
+├── cucumber.config.js            # Cucumber configuration
 ├── playwright.config.ts          # Playwright configuration
 ├── tsconfig.json
 └── package.json
@@ -149,10 +149,11 @@ HEADLESS=false npm test
 
 ```json
 {
-  "test":           "cucumber-js --config cucumber.js",
-  "test:smoke":     "TAGS=@smoke cucumber-js --config cucumber.js",
-  "test:negative":  "TAGS=@negative cucumber-js --config cucumber.js",
-  "test:security":  "TAGS=@security cucumber-js --config cucumber.js"
+    "test":           "cucumber-js --config cucumber.config.js",
+    "test:smoke":     "cross-env TAGS=@smoke cucumber-js --config cucumber.config.js",
+    "test:negative":  "cross-env TAGS=@negative cucumber-js --config cucumber.config.js",
+    "test:security":  "cross-env TAGS=@security cucumber-js --config cucumber.config.js"
+  }
 }
 ```
 

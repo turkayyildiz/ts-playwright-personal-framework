@@ -1,4 +1,3 @@
-// cucumber.js
 module.exports = {
     default: {
         paths:         ['features/**/*.feature'],
@@ -12,6 +11,6 @@ module.exports = {
             'progress-bar',
             'html:reports/cucumber-report.html',
         ],
-        tags: process.env.TAGS ?? '',
+        tags: process.env.TAGS || '',
     },
 };
