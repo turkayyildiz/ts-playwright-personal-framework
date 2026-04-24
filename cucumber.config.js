@@ -1,3 +1,7 @@
+require('dotenv').config({
+    path: `.env.${process.env.TEST_ENV ?? 'staging'}`
+});
+
 module.exports = {
     default: {
         paths:         ['features/**/*.feature'],

@@ -3,12 +3,22 @@ node_modules/
 
 # Playwright / Cucumber Artifacts
 test-results/
+reports/
 playwright-report/
 blob-report/
 playwright/.cache/
 playwright/.auth/
 videos/
 screenshots/
+
+# Environment files
+.env.staging
+.env.dev
+.env.prod
+
+# Agent docs
+agents.md
+AGENTS.md
 
 # Build / Output
 dist/
