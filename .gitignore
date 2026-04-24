@@ -11,11 +11,6 @@ playwright/.auth/
 videos/
 screenshots/
 
-# Environment files
-.env.staging
-.env.dev
-.env.prod
-
 # Agent docs
 agents.md
 AGENTS.md
@@ -30,3 +25,5 @@ dist/
 # OS Specific
 .DS_Store
 Thumbs.db
+env.staging
+env.dev

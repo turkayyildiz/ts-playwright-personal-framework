@@ -1,5 +1,5 @@
 // hooks/hooks.ts
-import { Before, After, BeforeAll, AfterAll } from '@cucumber/cucumber';
+import {Before, After, BeforeAll, AfterAll, setDefaultTimeout} from '@cucumber/cucumber';
 import { chromium, Browser, ConsoleMessage } from 'playwright';
 import { ICustomWorld } from '../support/world';
 import { LoginPage } from '../pages/loginPage';
@@ -10,6 +10,8 @@ const log = getLogger('Hooks');
 let browser: Browser;
 
 // ── Global lifecycle ─────────────────────────────────────────
+
+setDefaultTimeout(30000);
 
 BeforeAll(async () => {
     log.info({ env: process.env.TEST_ENV ?? 'staging' }, 'Launching browser');
