@@ -2,16 +2,21 @@ module.exports = {
     default: {
         requireModule: ['ts-node/register'],
         require: [
-            'steps/**/*.ts',  // Bütün alt klasörlerdeki adımları bulur
-            'hooks/**/*.ts'   // Browser'ı açıp kapatan hooks dosyasını bulur
+            'hooks/*.ts',
+            'steps/**/*.ts',
+            'support/**/*.ts'
         ],
         paths: [
-            'features/**/*.feature' // Tüm feature dosyalarını okur
+            'features/**/*.feature'
         ],
         format: [
-            'progress-bar', // Terminalde şık bir ilerleme çubuğu gösterir
-            'html:reports/cucumber-report.html' // Otomatik rapor oluşturur
+            'progress-bar',
+            'html:test-results/cucumber-report.html'
         ],
-        parallel: 1 // Şimdilik tek tek çalışsın, kafalar karışmasın
+        formatOptions: {
+            snippetInterface: 'async-await'
+        },
+        parallel: 1,
+        publishQuiet: true
     }
 }

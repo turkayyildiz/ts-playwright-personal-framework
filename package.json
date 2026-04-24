@@ -4,27 +4,20 @@
   "description": "Automated Testing Framework built with Playwright, TypeScript, and Cucumber (BDD). High-performance E2E testing suite for modern web applications with professional reporting.",
   "main": "index.js",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js --config cucumber.config.js",
+    "test:smoke": "TAGS=@smoke cucumber-js --config cucumber.config.js",
+    "test:negative": "TAGS=@negative cucumber-js --config cucumber.config.js",
+    "test:security": "TAGS=@security cucumber-js --config cucumber.config.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/turkayyildiz/ts-playwright-personal-framework.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/turkayyildiz/ts-playwright-personal-framework/issues"
-  },
-  "homepage": "https://github.com/turkayyildiz/ts-playwright-personal-framework#readme",
   "devDependencies": {
-    "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0",
-    "dotenv": "^17.4.2",
-    "ts-node": "^10.9.2"
+    "@cucumber/cucumber": "^10.3.2",
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "playwright": "^1.44.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@cucumber/cucumber": "^12.8.1"
+    "dotenv": "^17.4.2"
   }
 }
