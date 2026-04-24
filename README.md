@@ -6,6 +6,8 @@
 ![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)
 ![License](https://img.shields.io/badge/license-MIT-blue)
 
+Note: This repository is a personal showcase of the architectural patterns and best practices I implement in my professional automation projects. My primary daily contributions are hosted in private repositories at @turkayyildizz.
+
 A production-grade E2E test automation framework built with **TypeScript**, **Playwright**, and **Cucumber (BDD)**. Designed to scale across multiple environments and teams — featuring multi-environment config management, Pino structured logging, Playwright trace + visual regression, Docker containerisation, and full CI/CD via GitHub Actions.
 
 ---
