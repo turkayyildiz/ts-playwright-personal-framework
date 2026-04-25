@@ -8,6 +8,7 @@ module.exports = {
         require:       [
             'support/world.ts',
             'hooks/hooks.ts',
+            'hooks/api.hooks.ts',
             'steps/**/*.ts',
         ],
         requireModule: ['ts-node/register'],
