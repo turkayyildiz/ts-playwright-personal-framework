@@ -1,6 +1,6 @@
 # 🎭 TypeScript Playwright BDD Framework
 
-![CI](https://github.com/turkayyildiz/ts-playwright-personal-framework/actions/workflows/bdd-tests.yml/badge.svg)
+![CI](https://github.com/turkayyildiz/playwright-bdd-test-suite/actions/workflows/bdd-tests.yml/badge.svg)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-1.44-45ba4b?logo=playwright&logoColor=white)
 ![Cucumber](https://img.shields.io/badge/Cucumber-10.x-23D96C?logo=cucumber&logoColor=white)
@@ -180,7 +180,7 @@ ts-playwright-personal-framework/
 
 ```bash
 # Clone
-git clone https://github.com/turkayyildiz/ts-playwright-personal-framework.git
+git clone https://github.com/turkayyildiz/playwright-bdd-test-suite.git
 cd ts-playwright-personal-framework
 
 # Install dependencies
